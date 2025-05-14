@@ -4,6 +4,9 @@ const emit = defineEmits<Emit>();
 
 const timeOpen = ref("");
 const timeClose = ref("");
+const startTime = ref("");
+const endTime = ref("");
+const vehicleSchedule = ref(false)
 
 interface Props {
   isDialogVisible: boolean;
@@ -89,6 +92,85 @@ const dialogVisibleUpdate = (val: boolean) => {
             <!-- 👉 Address -->
             <VCol cols="12">
               <AppTextField label="Address" placeholder="Address" />
+            </VCol>
+
+            <VCol cols="12">
+              <VCard class="mb-6 mt-6">
+                <VCardItem class="pb-4">
+                  <VSwitch v-model="vehicleSchedule" density="compact" label="Vehicle Schedule?" />
+                </VCardItem>
+
+                <VDivider />
+
+                <v-table v-if="vehicleSchedule">
+                  <thead>
+                    <tr>
+                      <th class="text-left">Day</th>
+                      <th class="text-left">Start Time</th>
+                      <th class="text-left">End Time</th>
+                      <th class="text-left">Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Senin</td>
+                      <td>
+                        <AppDateTimePicker
+                          v-model="startTime"
+                          placeholder="Select time"
+                          :config="{
+                            enableTime: true,
+                            noCalendar: true,
+                            dateFormat: 'H:i',
+                          }"
+                        />
+                      </td>
+                      <td>
+                        <AppDateTimePicker
+                          v-model="endTime"
+                          placeholder="Select time"
+                          :config="{
+                            enableTime: true,
+                            noCalendar: true,
+                            dateFormat: 'H:i',
+                          }"
+                        />
+                      </td>
+                      <td>
+                        <AppTextField  placeholder="Duration" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Selasa</td>
+                      <td>
+                        <AppDateTimePicker
+                          v-model="startTime"
+                          placeholder="Select time"
+                          :config="{
+                            enableTime: true,
+                            noCalendar: true,
+                            dateFormat: 'H:i',
+                          }"
+                        />
+                      </td>
+                      <td>
+                        <AppDateTimePicker
+                          v-model="endTime"
+                          placeholder="Select time"
+                          :config="{
+                            enableTime: true,
+                            noCalendar: true,
+                            dateFormat: 'H:i',
+                          }"
+                        />
+                      </td>
+                      <td>
+                        <AppTextField  placeholder="Duration" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </v-table>
+              </VCard>
             </VCol>
 
             <!-- 👉 Switch Status -->

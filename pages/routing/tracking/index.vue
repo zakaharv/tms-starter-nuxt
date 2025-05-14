@@ -159,15 +159,14 @@ const menu = ref(false);
           </VMenu>
         </div>
       </VCol>
-      <VCol cols="12" md="5" class="px-0 py-0">
-        <div style="height: calc(100% - 70px); width: 100%; overflow: scroll">
-          <!-- 👉 Table -->
-          <VDataTable
+      <VCol cols="12" md="5" class="px-0 py-0 fill-height">
+        <!-- 👉 Table -->
+        <VDataTable
             :items="items"
             key="items.id"
             item-value="id"
             :headers="headers"
-            class="text-wrap text-body-2 routing-table overflow-auto"
+            class="text-wrap text-body-2 routing-table overflow-auto fill-height"
             hide-default-footer
             density="compact"
           >
@@ -221,7 +220,6 @@ const menu = ref(false);
               </div>
             </template>
           </VDataTable>
-        </div>
       </VCol>
     </VRow>
   </VCard>
