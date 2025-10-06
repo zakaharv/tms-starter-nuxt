@@ -98,7 +98,7 @@ const widgetData = ref([
                     </div>
                   </div>
                 </div>
-                <div class="trip-status">
+                <div class="trip-info">
                   <div class="trip-status-time">
                     <VChip color="success">
                       Start : <span class="font-weight-bold">09:00</span>
@@ -184,3 +184,19 @@ const widgetData = ref([
     </PerfectScrollbar>
   </VNavigationDrawer>
 </template>
+
+<style lang="scss">
+
+  .trip {
+    &-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .body-text-1 {
+      flex-shrink: 0;
+      }
+    }
+  }
+
+</style>
