@@ -37,7 +37,7 @@ const times = Array.from({ length: 36 }, (v, i) => {
     location="bottom"
     class="scrollable-content"
     :model-value="props.isDrawerOpen"
-    style="max-height: 575px"
+    style="min-height: 80%"
   >
     <!-- 👉 Title -->
     <AppDrawerHeaderSection
@@ -54,6 +54,11 @@ const times = Array.from({ length: 36 }, (v, i) => {
             <!-- 👉 Header -->
             <div class="timeline-header">
               <div class="timeline-header-vehicle"><span>Vehicle</span></div>
+              <div class="timeline-header-wrapper">
+                <div class="timeline-header-schedule">
+                <div class="timeline-header-date">
+                  22 August 2024 
+                </div>
               <div class="timeline-header-time">
                 <div
                   class="timeline-header-time-clock"
@@ -63,9 +68,12 @@ const times = Array.from({ length: 36 }, (v, i) => {
                   <span> {{ time }}</span>
                 </div>
               </div>
+              </div>
+              </div>
             </div>
             <!-- 👉 Line -->
-            <div class="timeline-line">
+            <div class="timeline-line-wrapper">
+              <div class="timeline-line">
               <!-- 👉 List -->
               <div class="timeline-line-list">
                 <div class="timeline-line-vehicle">
@@ -347,6 +355,7 @@ const times = Array.from({ length: 36 }, (v, i) => {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </PerfectScrollbar>

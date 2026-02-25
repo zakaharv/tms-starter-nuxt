@@ -202,11 +202,19 @@ h1 {
     width: fit-content;
     position: relative;
 
+    &-wrapper {
+      display: flex;
+      gap: 0;
+      flex-wrap: nowrap;
+    }
+
     &-vehicle {
       padding: 10px 16px;
-      height: 42px;
+      height: 70px;
       width: 300px;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: sticky;
       top: 0;
       left: 0;
@@ -221,6 +229,22 @@ h1 {
         width: calc(300px - 32px);
         display: block;
       }
+    }
+
+    &-schedule {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &-date {
+      display: flex;
+padding: 4px 8px;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+border-left: 1px solid rgba(47, 43, 61, 0.22);
+background: #F8F7FA;
     }
 
     &-time {
@@ -245,6 +269,7 @@ h1 {
         }
       }
     }
+
   }
 
   &-line {
@@ -256,6 +281,12 @@ h1 {
       height: 110px;
       width: fit-content;
       position: relative;
+    }
+
+    &-wrapper {
+      display: flex;
+      gap: 0;
+      flex-wrap: nowrap;
     }
 
     &-vehicle {
