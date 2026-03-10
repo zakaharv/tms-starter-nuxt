@@ -239,12 +239,24 @@ h1 {
 
     &-date {
       display: flex;
-padding: 4px 8px;
-align-items: center;
-gap: 10px;
-align-self: stretch;
-border-left: 1px solid rgba(47, 43, 61, 0.22);
-background: #F8F7FA;
+      padding: 4px 8px;
+      align-items: center;
+      gap: 10px;
+      border-left: 1px solid rgba(47, 43, 61, 0.22);
+      background: #F8F7FA;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      span {
+        position: sticky;
+        left: 310px;
+      }
+
+    &-wrapper {
+      position: relative;
+      height: 30px;
+    }
     }
 
     &-time {

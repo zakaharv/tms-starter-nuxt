@@ -56,8 +56,13 @@ const times = Array.from({ length: 36 }, (v, i) => {
               <div class="timeline-header-vehicle"><span>Vehicle</span></div>
               <div class="timeline-header-wrapper">
                 <div class="timeline-header-schedule">
-                <div class="timeline-header-date">
-                  22 August 2024 
+                <div class="timeline-header-date-wrapper">
+                  <div class="timeline-header-date" style="width: 1500px; left: 0;">
+                    <span>22 Agustus 2025</span>
+                  </div>
+                  <div class="timeline-header-date" style="width: 1500px; left: 1501px;">
+                    <span>23 Agustus 2025</span>
+                  </div>
                 </div>
               <div class="timeline-header-time">
                 <div
